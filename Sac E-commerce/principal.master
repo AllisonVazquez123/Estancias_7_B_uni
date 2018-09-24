@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="principal.master.cs" Inherits="principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/2000/svg">
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>home</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- Estilos Internos -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="Styles/Style1.css" rel="stylesheet" />
+     <link href="Styles/NavFooter.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+ <!-- Inicia navbar -->
+ 
+<div class="nav navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="Img/descarga.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <a class="navbar-brand" href="#">SAC</a>
+    <div class="col-sm-7">
+    </div>
+                    <div class="col-sm-2" id="informacion2">
+                    <div id="emer">
+                        <br>
+                        <i class="fas fa-phone"></i>
+                        TELÉFONO
+                    <br>
+                    <div id="tel">
+                        (618)145 6414
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-2" id="informacion3">
+                    <div id="emer">
+                        <br>
+                        <i class="fas fa-map-marker-alt"></i>
+                        DIRECCION
+                    <br>
+                    <div id="tel">
+                        Av José Revueltas 421
+                    </div>
+                    </div>
+                </div>
+</div>
+    
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Default.aspx">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Imagenes.aspx">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="somos.aspx">Nosotros</a>
+      </li>
+    </ul>
+  </div>
+
+    <div class="input-group mb-1" style="position:relative; left: -29px; width: 230px; top:2px">
+    <asp:TextBox ID="txtbuscar" runat="server" class="form-control" placeholder="Buscar"></asp:TextBox>
+  
+  <div class="input-group-append">
+    <asp:Button ID="btnbuscar" runat="server" class="btn btn-outline-secondary" Text="Buscar" OnClick="btnbuscar_Click1"></asp:Button>
+  </div>
+</div>
+
+    <asp:Button ID="btnCerrar" runat="server" Text="Cerrar Sesión"  class="btn btn-secondary" OnClick="btnCerrar_Click1" Height="32px"></asp:Button>
+ <div class="btn-group" style="position:relative; left:-2%;" role="group">
+    <asp:Button ID="Btninicio" runat="server" Text="Iniciar Sesión"  CssClass="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" OnClick="Btninicio_Click" > </asp:Button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="login.aspx">Ingresar</a>
+      <a class="dropdown-item" href="Solicitud.aspx">Solicitar Cuenta</a>
+    </div>
+  </div>
+
+
+</nav>
+
+
+
+<!-- Teremina navbar -->
+
+    <div class="clear"></div>
+
+     <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+ <!-- Inicia footer -->
+       <div class="info-main">
+      <div class="info-main">
+        <h3>Contactenos</h3>
+        <p>Lorem ipsum dolor sit ameation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Mas informacion</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-columna" >
+          <p>© Derechos Reservados Evolution Development Software</p>
+          </div>
+
+          <div class="footer-columna" >
+            <span class=""><p>C. Veronica Castro #100 Col. Valle del Guadiana, Durango, Dgo.</p></span>
+            <span class=""><p>(+51) 618 158 8032</p></span>
+            <span class=""><p> http://www.evolsoft.com.mx </p></span>
+          </div>
+
+          <div class="footer-columna" >
+            <p>SAC Tienda en línea es un producto creado y desarrollado por Evolsoft.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-main-div">
+               <div class="footer-social-icons">
+                   <ul>
+                       <li><a href="#" terget="blank"><i class="fab fa-facebook"></i></a></li>
+                       <li><a href="#" terget="blank"><i class="fab fa-twitter"></i></a></li>
+                       <!--<li><a href="#" terget="blank"><i class="fab fa-google-plus"></i></a></li>-->
+                       <!--<li><a href="#" terget="blank"><i class="fab fa-youtube"></i></a></li>-->
+                   </ul>
+               </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+ <!-- Termina footer -->
+        </div>
+    </form>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+</body>
+</html>

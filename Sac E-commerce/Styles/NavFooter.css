@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.navbar {
+    background-color: #03182f;
+}
+
+.navbar .navbar-brand{
+    color:#03182f;
+
+}
+
+.navbar .navbar-brand:hover{
+    color:#FFF
+}
+.navbar .navbar-nav li a{
+    color: #FFF !important;
+}
+    .navbar .nav-item .dropdown-menu .dropdown-item {
+        color: #03182f;
+    }
+
+.nabvar-toggler {
+    color: #FFF;
+}

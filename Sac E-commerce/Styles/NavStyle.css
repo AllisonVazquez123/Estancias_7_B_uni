@@ -1,0 +1,22 @@
+﻿
+body {
+
+}
+
+.navbar {
+    background-color: #808080;
+}
+
+    .navbar .navbar-brand {
+        color: aqua;
+    }
+
+        .navbar .navbar-brand:hover {
+            color: aqua;
+        }
+
+    .navbar .navbar-nav li a {
+        color: aqua;
+    }
+
+   
