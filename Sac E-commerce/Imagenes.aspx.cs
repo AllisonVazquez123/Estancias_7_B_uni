@@ -14,19 +14,12 @@ public partial class Imagenes : System.Web.UI.Page
    
     protected void Page_Load(object sender, EventArgs e)
     {
-        /*
-        con.abrir_conexion();
-        DataTable dt = con.selectDataTable(string.Format("select imagen from imagen"));
-        byte[] imagen = null;
-        for (int i = 0; i < dt.Rows.Count; i++)
+        Button[] botones = new Button[10];
+        for (int i = 0; i < 10; i++)
         {
-            imagen = (byte[])dt.Rows[i][0];
-            string ImagenDataURL64 = "data:image/jpg;base64," + Convert.ToBase64String(imagen);
-            imgPreview.ImageUrl = ImagenDataURL64;
-            
+            botones[i].Text = "Boton " + (i + 1).ToString();
+            phProductos.Controls.Add(botones[i]);
         }
-        
-        con.cerrar_conexion();*/
     }
 
     protected void BtnSubir_Click(object sender, EventArgs e)

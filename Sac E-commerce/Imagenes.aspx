@@ -17,7 +17,7 @@
              <div style="margin:auto; margin-top:60px;">
 
              <%
-                 Conexion con = new Conexion();
+                 /*Conexion con = new Conexion();
                  System.Data.DataTable dt = con.selectDataTable(Session["buscarprod"].ToString());
                  byte[] imagen = null;
                  for (int i = 0; i < dt.Rows.Count; i++)
@@ -28,17 +28,18 @@
                      string ImagenDataURL64 = "data:image/jpg;base64," + Convert.ToBase64String(imagen);
                      imgPreview.ImageUrl = ImagenDataURL64;
              %>
-                     <div class="card" style="width: 15rem; float:left; margin-left:30px; margin-bottom:30px;">
+                 <asp:PlaceHolder ID="phProductos" runat="server"></asp:PlaceHolder>
+                     <!--<div class="card" style="width: 15rem; float:left; margin-left:30px; margin-bottom:30px;">
                          <asp:Image ID="imgPreview" width="200" Height="200" CssClass="card-img-top" style="margin:auto;" ImagenUrl="https://www.petdarling.com/articulos/wp-content/uploads/2014/06/como-quitarle-las-pulgas-a-mi-perro.jpg" runat="server" />
                       <div class="card-body">
                         <h5 ID="titulo" class="card-title" Runat="Server">Card title</h5>
                         <p ID="Desc" runat="server" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                       </div>
-                    </div>
+                    </div>-->
              <%
                      
-                 }
+                 }*/
              %>
                  </div>
             
