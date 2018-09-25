@@ -22,7 +22,6 @@
       <!--<img class="d-block w-100" src="Img/RCC-3.jpg" alt="First slide">-->
     </div>
       
-
       <%for (int i = 1; i < dt.Rows.Count; i++)
           {
               imagen = (byte[])dt.Rows[i][0];

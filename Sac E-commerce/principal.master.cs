@@ -22,6 +22,7 @@ public partial class principal : System.Web.UI.MasterPage
         {
             btnCerrar.Visible = true;
         }
+        liProductos.Visible = false;
     }
 
     protected void Btninicio_Click(object sender, EventArgs e)
